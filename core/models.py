@@ -14,7 +14,15 @@ class Employee(models.Model):
         blank=False,
         max_length=104
     )
+    salary = models.FloatField(
+        db_column='nb_salary',
+        null=False,
+        blank=False,
+    )
 
     class Meta:
         db_table = 'employee'
         managed = True
+
+
+
