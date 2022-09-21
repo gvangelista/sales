@@ -5,3 +5,8 @@ from core import models, serializers
 class EmployeeViewSet(viewsets.ModelViewSet):
     queryset = models.Employee.objects.all()
     serializer_class = serializers.EmployeeSerializer
+
+
+class DepartmentViewSet(viewsets.ModelViewSet):
+    queryset = models.Departament.objects.all()
+    serializer_class = serializers.DepartmentSerializer

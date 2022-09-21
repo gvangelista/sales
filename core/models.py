@@ -25,4 +25,25 @@ class Employee(models.Model):
         managed = True
 
 
+class Departament(models.Model):
+    id = models.AutoField(
+        db_column='id',
+        primary_key=True,
+        null=False
+    )
+    name = models.CharField(
+        db_column='tx_name',
+        max_length=104,
+        null=False,
+        blank=False,
+        unique=True)
+    active = models.BooleanField(
+        db_column='cs_active',
+        null=False,
+        blank=False,
+        default=True
+    )
 
+    class Meta:
+        db_table = 'department'
+        managed = True

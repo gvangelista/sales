@@ -6,3 +6,9 @@ class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Employee
         fields = '__all__'
+
+
+class DepartmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Departament
+        fields = '__all__'
