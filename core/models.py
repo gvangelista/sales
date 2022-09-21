@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Employee(models.Model):
@@ -18,6 +19,13 @@ class Employee(models.Model):
         db_column='nb_salary',
         null=False,
         blank=False,
+    )
+    department = models.ForeignKey(
+        to='Departament',
+        on_delete=models.DO_NOTHING,
+        db_column='id_department',
+        null=True,
+        blank=True
     )
 
     class Meta:
